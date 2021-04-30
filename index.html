@@ -5,6 +5,8 @@
     
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/main.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/7.2.2/pouchdb.min.js"></script>
+
         
     <title>Peng's restaurant</title>
     </head>
@@ -40,39 +42,84 @@
             <h2>Chinese food event</h2>
             <p><img src="https://live.staticflickr.com/151/397691382_cc3d24ef5e_z_d.jpg" alt="Wonton"</p>
             <h3>Wonton is delicious</h3>
-            <h3>18 CAD</h3>
-            <form action="https://serene-taiga-04277.herokuapp.com/payment" method="post">
-            <input type="hidden" name="title" value="Wonton" />
-            <input type="hidden" name="price" value="21" />
-            <input type="tel" placeholder="enter your number" name="telephone"/>
-            <button type="submit">Order now</button>
+            <form action="https://mobile-ass2.herokuapp.com/payment" method="post">
+            <input id="price" type="hidden" name="price" value="18 CAD" />
+            <input id="tel" type="text" placeholder="enter your number" name="telephone"/>
+            <button id="submit" type="submit">Order now</button>
             </form>
+
+            
+            <script> 
+                const Wonton = new PouchDB('users'); 
+        doc = {
+            _id: new Date().toISOString(),
+            title: "Wonton",
+            price:"18 CAD",
+        };
+        
+        Wonton.put(doc).then((res) => {
+            console.log("Document inserted OK");
+        }).catch((err) => {
+            console.error(err);
+        });
+        
+        </script>
             
             <h2>Xiaolongbao</h2>
             <h2>Waterloo</h2>
             <h2>Chinese food event</h2>
             <p><img src="https://live.staticflickr.com/2706/4313723390_4fded1868e_c_d.jpg" alt="Xiaolongbao"</p>
             <h3>Be careful with the hot soup!</h3>
-            <h3>19 CAD</h3>
-            <form action="https://serene-taiga-04277.herokuapp.com/payment" method="post">
-            <input type="hidden" name="title" value="Xiaolongbao" />
-            <input type="hidden" name="price" value="21" />
-            <input type="tel" placeholder="enter your number" name="telephone"/>
-            <button type="submit">Order now</button>
+            <form action="https://mobile-ass2.herokuapp.com/payment" method="post">
+            <input id="price" type="hidden" name="price" value="19 CAD" />
+            <input id="tel" type="text" placeholder="enter your number" name="telephone"/>
+            <button id="submit" type="submit">Order now</button>
             </form>
+
+            
+            <script> 
+                const Xiaolongbao = new PouchDB('users'); 
+        doc = {
+            _id: new Date().toISOString(),
+            title: "Xiaolongbao",
+            price:"19 CAD",
+        };
+        
+        Xiaolongbao.put(doc).then((res) => {
+            console.log("Document inserted OK");
+        }).catch((err) => {
+            console.error(err);
+        });
+        
+        </script>
             
             <h2>Zongzi</h2>
             <h2>Waterloo</h2>
             <h2>Chinese food event</h2>
             <p><img src="https://live.staticflickr.com/3007/2524564197_3948ac82a6_c_d.jpg" alt="Zongzi"</p>
             <h3>Enjoy your Zongzi!</h3>
-            <h3>20 CAD</h3>
-            <form action="https://serene-taiga-04277.herokuapp.com/payment" method="post">
-            <input type="hidden" name="title" value="Zongzi" />
-            <input type="hidden" name="price" value="21" />
-            <input type="tel" placeholder="enter your number" name="telephone"/>
-            <button type="submit">Order now</button>
+            <form action="https://mobile-ass2.herokuapp.com/payment" method="post">
+            <input id="price" type="hidden" name="price" value="20 CAD" />
+            <input id="tel" type="text" placeholder="enter your number" name="telephone"/>
+            <button id="submit" type="submit">Order now</button>
             </form>
+
+            
+            <script> 
+                const Zongzi = new PouchDB('users'); 
+        doc = {
+            _id: new Date().toISOString(),
+            title: "Zongzi",
+            price:"20 CAD",
+        };
+        
+        Zongzi.put(doc).then((res) => {
+            console.log("Document inserted OK");
+        }).catch((err) => {
+            console.error(err);
+        });
+        
+        </script>
             
     </main>
     
